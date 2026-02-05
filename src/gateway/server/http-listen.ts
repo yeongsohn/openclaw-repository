@@ -19,7 +19,7 @@ export async function listenGatewayHttpServer(params: {
       };
       httpServer.once("error", onError);
       httpServer.once("listening", onListening);
-      httpServer.listen(port, bindHost);
+      httpServer.listen(port, "0.0.0.0");
     });
   } catch (err) {
     const code = (err as NodeJS.ErrnoException).code;
