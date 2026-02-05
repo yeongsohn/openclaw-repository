@@ -68,7 +68,7 @@ export function buildGatewayConnectionDetails(
   const localUrl =
     preferTailnet && tailnetIPv4
       ? `${scheme}://${tailnetIPv4}:${localPort}`
-      : `${scheme}://127.0.0.1:${localPort}`;
+      : `${scheme}:/0.0.0.0:${localPort}`;
   const urlOverride =
     typeof options.url === "string" && options.url.trim().length > 0
       ? options.url.trim()
